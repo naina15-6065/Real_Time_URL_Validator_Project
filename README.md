@@ -21,7 +21,7 @@
 
 ##  Features
 
-###  Lexical Analysis
+###  1. Lexical Analysis
 
 The Lex analyzer identifies different URL components, including:
 
@@ -33,7 +33,7 @@ The Lex analyzer identifies different URL components, including:
 * Fragments
 * URL separators and identifiers 
 
-###  Syntax Analysis
+###  2. Syntax Analysis
 
 Yacc/Bison validates the URL according to the defined grammar:
 
@@ -41,7 +41,7 @@ Yacc/Bison validates the URL according to the defined grammar:
 
 Optional components such as query strings and fragments are supported. Invalid structures generate syntax error messages. 
 
-###  URL Parsing
+###  3. URL Parsing
 
 For a valid URL, the system extracts:
 
@@ -54,11 +54,11 @@ For a valid URL, the system extracts:
 
 This provides a clear structural breakdown of the entered web address. 
 
-###  Real-Time Validation
+###  4. Real-Time Validation
 
 The compiler provides near-instant validation and handles both valid and invalid URL patterns efficiently. It was tested with simple domains, subdomains, ports, paths, queries, and fragments. 
 
-###  Error Handling
+###  5. Error Handling
 
 Malformed URLs are rejected with appropriate syntax error messages. For example, the system detects incorrect URL structures and prompts the user to enter another URL. 
 
@@ -77,7 +77,5 @@ Malformed URLs are rejected with appropriate syntax error messages. For example,
 
 ##  System Workflow
 
-**URL Input → Lexical Analysis → Tokenization → Yacc/Bison Parsing → Grammar Validation → URL Component Extraction → Result/Error**
-
-The project integrates Lex and Yacc/Bison with a C driver program to create the complete URL validation compiler. 
+**URL Input → Lexical Analysis → Tokenization → Yacc/Bison Parsing → Grammar Validation → URL Component Extraction → Result/Error** 
 
